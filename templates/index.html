@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Questions Stack Overflow</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px; /* Adjust the margin as needed */
+        }
+
+        h1, h2 {
+            margin-bottom: 20px; /* Add some spacing between headings and other elements */
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            padding: 5px;
+            margin-right: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Questions Stack Overflow</h1>
+    <form action="/predict" method="post">
+        <input type="text" name="input_data" placeholder="Enter your question">
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction_result %}
+    <h2>Suggestion des mots cles:</h2>
+    <p>{{ prediction_result }}</p>
+    {% endif %}
+</body>
+</html>
