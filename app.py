@@ -5,10 +5,10 @@ import re
 
 app = Flask(__name__)
 
-with open('lda_model.pkl', 'rb') as model_file:
+with open('models/lda_model.pkl', 'rb') as model_file:
     lda_model = pickle.load(model_file)
 
-with open('train_dictionary.pkl', 'rb') as dictionary_file:
+with open('models/train_dictionary.pkl', 'rb') as dictionary_file:
     dictionary = pickle.load(dictionary_file)
 
 nltk.download('punkt')  # Only required once to download the tokenizer data
@@ -57,7 +57,7 @@ def predict():
 
     return render_template('index.html', prediction_result=test_keywords)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
 
 

@@ -3,6 +3,7 @@ import requests
 ride = { "Title": "This is a test to check how to use pickle, ipadn jason, microsoft azur and amazon AWS" }
 
 url = 'http://localhost:5000/api/predict'
+#url = 'https://p5api.scm.azurewebsites.net/'
 response = requests.post(url, json=ride)
 
 # Check if the request was successful (status code 200 indicates success)
