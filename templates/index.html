@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Questions Stack Overflow</title>
+    <title>Questions Stack Overflow (Titre + Body)</title>
     <style>
         body {
             text-align: center;
@@ -17,10 +17,11 @@
             text-align: left;
         }
 
-        input[type="text"] {
-            width: 300px;
+        textarea {
+            width: 800px;
+            height: 300px; /* Set the height to display ten lines of text */
             padding: 5px;
-            margin-right: 10px;
+            margin-bottom: 10px;
         }
 
         button {
@@ -35,7 +36,8 @@
 <body>
     <h1>Questions Stack Overflow</h1>
     <form action="/predict" method="post">
-        <input type="text" name="input_data" placeholder="Enter your question">
+        <textarea name="input_data" placeholder="Enter your question and description"></textarea>
+        <br>
         <button type="submit">Predict</button>
     </form>
     {% if prediction_result %}
@@ -44,3 +46,4 @@
     {% endif %}
 </body>
 </html>
+
